@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.testnavigation.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_simpleCalculatorFragment"
+            app:destination="@id/simpleCalculatorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_personalCalculatorFragment"
+            app:destination="@id/personalCalculatorFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_studentManagementFragment"
+            app:destination="@id/studentManagementFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/simpleCalculatorFragment"
+        android:name="com.example.testnavigation.SimpleCalculatorFragment"
+        android:label="Simple Calculator"
+        tools:layout="@layout/fragment_simple_calculator" >
+        <action
+            android:id="@+id/action_simpleCalculatorFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/personalCalculatorFragment"
+        android:name="com.example.testnavigation.PersonalCalculatorFragment"
+        android:label="Personal Calculator"
+        tools:layout="@layout/fragment_personal_calculator" >
+        <action
+            android:id="@+id/action_personalCalculatorFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/studentManagementFragment"
+        android:name="com.example.testnavigation.StudentManagementFragment"
+        android:label="Student Management"
+        tools:layout="@layout/fragment_student_management" >
+        <action
+            android:id="@+id/action_studentManagementFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+
+</navigation>
